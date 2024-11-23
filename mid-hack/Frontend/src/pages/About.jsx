@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import Features from '../components/Features';
 import { StarsCanvas } from '../components/StarBackground'
 import { FiPlus, FiMinus } from 'react-icons/fi';
-import "../components/Card.css";
+import "../components/Features.css";
+import { Link } from 'react-router-dom';
 
 
 
@@ -151,27 +152,26 @@ function About() {
           <StarsCanvas />
 
           {/* Hero Section */}
-          {/* <HeroAbout className='z-50'/> */}
           <div>
             <motion.section
               className="w-full h-screen bg-cover bg-center relative text-white"
-              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070')" }}
+              // style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070')" }}
               // style={{ backgroundImage: "url('https://picsum.photos/seed/picsum/2400/2400')" }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ type: 'spring', stiffness: 100, damping: 25 }}
               viewport={{ once: true }}
             >
-              <div className="absolute inset-0 bg-black opacity-50"></div>
+              <div className="absolute inset-0 bg-black opacity-80"></div>
               <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
                 <h1 className="text-5xl font-bold mb-6">Smart Shipping Solutions for the Modern Business</h1>
                 <p className="mt-4 text-2xl mb-6">Optimize packaging, reduce costs, and ship efficiently with ShipWise.</p>
                 <p className="mt-4 mx-16 text-lg px-40 mb-8">
                   At ShipWise, we make shipping smarter and more economical. Our platform analyzes carton sizes and recommends the most cost-effective couriers, helping you save time, reduce costs, and ship with precision.
                 </p>
-                <a href="/login" className="mt-8 rounded px-6 py-2 font-medium bg-indigo-500 text-white w-fit transition-all shadow-[4px_4px_4px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
+                <Link href="/login" className="mt-8 rounded px-6 py-2 font-medium bg-indigo-500 text-white w-fit transition-all shadow-[4px_4px_4px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
                   Get Started with ShipWise
-                </a>
+                </Link>
               </div>
             </motion.section>
           </div>
@@ -197,7 +197,6 @@ function About() {
             </motion.section>
           </div>
 
-          {/* <MissionVision className='z-50'/> */}
           <div> {/* Mission Section */}
             <div className="flex justify-center my-8 items-center px-4">
 
@@ -281,11 +280,10 @@ function About() {
                 <p className="text-5xl text-white font-semibold">Frequently Asked Questions</p>
               </div>
 
-              {/* Map over the FAQ data and render each question */}
               {faqData.map((faq, index) => (
                 <div
                   key={index}
-                  className="border-l-4 border-green-500 bg-gray-900 bg-opacity-70 p-6 rounded-md" // Semi-transparent background
+                  className="border-l-4 border-green-500 bg-gray-900 bg-opacity-70 p-6 rounded-md"
                 >
                   <div
                     className="flex cursor-pointer items-center justify-between gap-1.5"

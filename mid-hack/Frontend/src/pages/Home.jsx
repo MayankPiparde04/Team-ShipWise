@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Boxes, PackageSearch } from 'lucide-react';
-
-// import Footer from '../components/Footer';
 import BenefitsSection from '../components/BenefitsSection';
 import Features from '../components/Features';
 import { StarsCanvas } from '../components/StarBackground';
@@ -18,7 +16,7 @@ function Home() {
           <StarsCanvas />
           
           {/* Hero Section */}
-          <div className="relative z-10 flex flex-col justify-center items-center w-full h-screen gap-8 overflow-hidden min-h-full">
+          <div className="relative mt-8 z-10 flex flex-col justify-center items-center w-full h-screen gap-8 overflow-hidden min-h-full">
             <motion.section
               className="pt-20 lg:px-20 py-20 md:py-24 lg:py-20 w-full h-full bg-cover bg-center relative text-white flex flex-col lg:flex-row overflow-hidden items-center justify-between px-6 md:px-12 space-y-10 md:space-y-0"
               style={{

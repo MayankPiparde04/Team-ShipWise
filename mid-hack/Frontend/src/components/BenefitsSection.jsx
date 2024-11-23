@@ -1,6 +1,6 @@
 import React from "react";
-import { FaTruck, FaSmile, FaDollarSign, FaCogs } from "react-icons/fa"; // Importing icons
-import { motion } from "framer-motion"; // Import Framer Motion
+import { FaTruck, FaSmile, FaDollarSign, FaCogs } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const benefits = [
     {

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./Card.css"; // For custom CSS styles like the overlay effect
+import "./Features.css"; 
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 

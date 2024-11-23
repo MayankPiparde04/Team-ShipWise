@@ -1,8 +1,13 @@
 import React from 'react'
+import BufferingCalculation from '../calculation/BufferingCalculation'
+import OptimalCalculation from '../calculation/OptimalCalculation'
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <div>
+      <BufferingCalculation />
+      <OptimalCalculation />
+    </div>
   )
 }
 
