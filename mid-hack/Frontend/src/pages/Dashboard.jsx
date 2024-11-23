@@ -8,6 +8,7 @@ import RemoveItem from "../inventory/RemoveItem";
 import AddBox from "../inventory/AddBox";
 import PickBox from "../inventory/PickBox";
 import RemoveBox from "../inventory/RemoveBox";
+import OptimalCalculation from "../calculation/OptimalCalculation";
 
 const Dashboard = () => {
   const { id } = useParams();
@@ -25,6 +26,8 @@ const Dashboard = () => {
       return <PickBox />;
     } else if (id === "removebox") {
       return <RemoveBox />;
+    } else if (id === "optimalcalculation") {
+      return <OptimalCalculation />;
     } else {
       return <Statistics />;
     }

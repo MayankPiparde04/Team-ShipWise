@@ -7,7 +7,7 @@ const Sidebar = () => {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   const navLinks = [
-    { id: "home", label: "Home", path: "/" },
+    { id: "/", label: "Home", path: "/" },
     { id: "about", label: "About", path: "/about" },
     { id: "dashboard", label: "Dashboard", path: "/dashboard/home" },
     { id: "listitems", label: "List Items", path: "/dashboard/listitems" },
@@ -16,6 +16,7 @@ const Sidebar = () => {
     { id: "addbox", label: "Add Box", path: "/dashboard/addbox" },
     { id: "removebox", label: "Remove Box", path: "/dashboard/removebox" },
     { id: "pickbox", label: "Pick Box", path: "/dashboard/pickbox" },
+    { id: "optimalcalculation", label: "Optimal Calculation", path: "/dashboard/optimalcalculation" },
   ];
 
   return (
