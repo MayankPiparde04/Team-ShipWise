@@ -1,8 +1,16 @@
-export const inventory = {
+export const calculateCostPrediction = (items) => {
+    return items.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+  
+  export const calculateWeightPrediction = (items) => {
+    return items.reduce((total, item) => total + item.weight * item.quantity, 0);
+  };
+  
+  export const inventory = {
     tiffin: {
       shape: "cuboid",
-      dimensions: { length: 10, breadth: 5, height: 15 },
-      weight: 125 ,
+      dimensions: { length: 10, width: 5, height: 15 },
+      weight: 125,
     },
     rubic: {
       shape: "cube",
@@ -15,3 +23,4 @@ export const inventory = {
       weight: 32,
     },
   };
+  

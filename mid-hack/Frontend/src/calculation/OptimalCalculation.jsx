@@ -80,20 +80,21 @@ function OptimalCalculation() {
   };
 
   return (
-    <div className="w-full max-w- mx-auto dark:bg-gray-900 dark:text-gray-100">
+    <div className="w-full mx-auto dark:bg-gray-900 dark:text-gray-100 items-center justify-center">
+      <div className="pt-8 text-center mb-6">
+        <h2 className="text-4xl font-bold">Optimal Calculation</h2>
+      </div>
       <div className="flex border-b border-gray-700">
         <button
-          className={`w-1/2 py-4 text-center font-medium border-r-2 border-gray-700 dark:bg-gray-800 dark:text-gray-100 rounded-tl-lg focus:outline-none ${
-            activeTab === "tab1" ? "bg-gray-700" : ""
-          }`}
+          className={`w-1/2 py-4 text-center font-medium border-r-2 border-gray-700 dark:bg-gray-800 dark:text-gray-100 rounded-tl-lg focus:outline-none ${activeTab === "tab1" ? "bg-gray-700" : ""
+            }`}
           onClick={() => openTab("tab1")}
         >
           Inventory Calculation
         </button>
         <button
-          className={`w-1/2 py-4 text-center font-medium dark:bg-gray-800 dark:text-gray-100 rounded-tr-lg focus:outline-none ${
-            activeTab === "tab2" ? "bg-gray-700" : ""
-          }`}
+          className={`w-1/2 py-4 text-center font-medium dark:bg-gray-800 dark:text-gray-100 rounded-tr-lg focus:outline-none ${activeTab === "tab2" ? "bg-gray-700" : ""
+            }`}
           onClick={() => openTab("tab2")}
         >
           New Item Calculation

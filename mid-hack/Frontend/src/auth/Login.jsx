@@ -2,14 +2,24 @@ import React, { useState } from 'react';
 import { FaEnvelope, FaLock } from 'react-icons/fa'; // Updated icons
 import LoginImage from '../assets/Login-image.png';
 import { StarsCanvas } from '../components/StarBackground';
-
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5000/api/login', { email, password });
+      localStorage.setItem('token', response.data.token);
+      navigate('/');
+    } catch (err) {
+      console.error(err.response?.data?.errors || "Login failed");
+      alert(err.response?.data?.errors || "Something went wrong");
+    }
   };
 
   return (

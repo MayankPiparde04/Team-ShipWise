@@ -2,22 +2,10 @@ import React, { useState } from "react";
 // import bufferImage from '../assets/Cartons/buffer-page.png';
 
 const BufferingCalculation = () => {
-  const [productName, setProductName] = useState("");
   const [category, setCategory] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [brand, setBrand] = useState("");
-  const [price, setPrice] = useState("");
-  const [shape, setShape] = useState("");
-  const [side, setSide] = useState("");
-  const [length, setLength] = useState("");
-  const [breadth, setBreadth] = useState("");
-  const [height, setHeight] = useState("");
-  const [radius, setRadius] = useState("");
-  const [item, setItem] = useState("");
   const [unit, setUnit] = useState("");
   const [size, setSize] = useState("");
   const [weight, setWeight] = useState("");
-  const [productDetails, setProductDetails] = useState("");
   const [bufferSize, setBufferSize] = useState("");
 
   const handleSubmit = (e) => {
@@ -87,7 +75,7 @@ const BufferingCalculation = () => {
         <h2 className="text-4xl font-bold">Buffer Suggestions for your Product!!</h2>
       </div>
       <div id="tab2" className="tabcontent p-4">
-        <div className="bg-gray-800 border border-4 rounded-lg shadow relative m-10 flex flex-col md:flex-row">
+        <div className="bg-gray-800 border-4 rounded-lg shadow relative m-10 flex flex-col md:flex-row">
           {/* Form Section */}
           <div className="flex-1 p-6">
             <div className="flex items-start justify-between p-5 border-b rounded-t">
@@ -189,15 +177,6 @@ const BufferingCalculation = () => {
               </form>
             </div>
           </div>
-
-          {/* Image Section */}
-          {/* <div className="w-full md:w-1/4 p-6 flex justify-center items-center">
-            <img
-            //   src={bufferImage}
-              alt="Buffer Suggestion"
-              className="w-96 h-auto"
-            />
-          </div> */}
         </div>
       </div>
     </div>

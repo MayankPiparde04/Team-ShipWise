@@ -8,6 +8,7 @@ import SignUp from "./auth/Signup";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ActivateAccount from "./pages/ActivateAccount";
 
 const Layout = ({ withFooter = true }) => (
   <div className="flex flex-col min-h-screen">
@@ -38,6 +39,7 @@ function App() {
       element: <Layout withFooter={false} />,
       children: [
         { path: "login", element: <Login /> },
+        { path: "activate/:token", element: <ActivateAccount /> }, // Added ActivateAccount route
         { path: "signup", element: <SignUp /> },
       ],
     },

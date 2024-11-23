@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FaUser, FaEnvelope, FaKey, FaUnlockAlt } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaKey, FaUnlockAlt } from 'react-icons/fa'; // Updated icons
 import SignUpImage from '../assets/Signup-image.png';
+import axios from 'axios';
 import { StarsCanvas } from '../components/StarBackground';
 
 function SignUp() {
@@ -10,7 +11,20 @@ function SignUp() {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleSubmit = async (e) => {
-    
+    e.preventDefault();
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    try {
+      const response = await axios.post('http://localhost:5000/api/register', { name, email, password });
+      alert(response.data.message);
+    } catch (error) {
+      console.error(error.response?.data?.errors || "Registration failed");
+      alert(error.response?.data?.errors || "Something went wrong");
+    }
   };
 
   return (

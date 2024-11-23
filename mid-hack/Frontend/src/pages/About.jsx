@@ -5,6 +5,8 @@ import { StarsCanvas } from '../components/StarBackground'
 import { FiPlus, FiMinus } from 'react-icons/fi';
 import "../components/Features.css";
 import { Link } from 'react-router-dom';
+import Mission from '../assets/Mission.png';
+import Vision from '../assets/Vision.png';
 
 
 
@@ -215,7 +217,7 @@ function About() {
                 </div>
                 <div className="flex w-[500px] h-auto justify-center items-center p-6">
                   <img
-                    src="https://picsum.photos/400/400?random=1"
+                    src={Mission}
                     alt="Mission"
                     className="saturate-0 aspect-square transition-transform duration-200 ease-linear group-hover:saturate-100 group-hover:scale-105 relative z-10 w-full border border-gray-600 shadow-lg"
                   />
@@ -235,7 +237,7 @@ function About() {
               >
                 <div className="flex w-[500px] h-auto justify-center items-center p-6">
                   <img
-                    src="https://picsum.photos/400/400?random=2"
+                    src={Vision}
                     alt="Vision"
                     className="saturate-0  aspect-square transition-transform duration-200 ease-linear group-hover:saturate-100 group-hover:scale-105 relative z-10 w-full border border-gray-600 shadow-lg"
                   />

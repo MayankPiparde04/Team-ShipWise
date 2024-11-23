@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-8 flex justify-between items-center w-full">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={Logo} alt="ShipWise Logo" className="h-12" />
+          <img src={Logo} alt="ShipWise Logo" className="h-16" />
         </Link>
 
         {/* Full Navigation Links (visible on large screens) */}
